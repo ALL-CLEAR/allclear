@@ -1,0 +1,12 @@
+server:
+  port: ${REGISTRY_PORT}
+spring:
+  application:
+    name: registry-service
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    # eureka server port 변경시 defaultURL 명시
+    service-url:
+      defaultZone: ${REGISTRY_URL}
